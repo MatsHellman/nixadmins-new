@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Mats Hellman">
+<meta name="description" content="Some ramblings about i3 on my old X220." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="http://localhost:1313/posts/adventures-in-i3-land/" />
+
+
+    <title>
+        
+            Adventures in i3 land :: Ramblings of an old geek 
+        
+    </title>
+
+
+
+
+
+  <link rel="stylesheet" href="/main.min.07ea7ac7da67e2e153a7dfa2457bc6a19cca824288d175e223fadc579041bc51.css" integrity="sha256-B&#43;p6x9pn4uFTp9&#43;iRXvGoZzKgkKI0XXiI/rcV5BBvFE=" crossorigin="anonymous">
+
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+
+  <meta itemprop="name" content="Adventures in i3 land">
+  <meta itemprop="description" content="Some ramblings about i3 on my old X220.">
+  <meta itemprop="datePublished" content="2020-04-11T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2020-04-11T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1031">
+  <meta itemprop="keywords" content="i3wm,x220,lenovo,tiling,windowmanager">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Adventures in i3 land">
+  <meta name="twitter:description" content="Some ramblings about i3 on my old X220.">
+
+
+
+    <meta property="og:url" content="http://localhost:1313/posts/adventures-in-i3-land/">
+  <meta property="og:site_name" content="Ramblings of an old geek">
+  <meta property="og:title" content="Adventures in i3 land">
+  <meta property="og:description" content="Some ramblings about i3 on my old X220.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-04-11T00:00:00+00:00">
+    <meta property="article:modified_time" content="2020-04-11T00:00:00+00:00">
+
+
+
+
+
+
+    <meta property="article:published_time" content="2020-04-11 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text ">
+                mbh@nixadmins #&gt;</span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#4AF626;
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/">/home</a></li><li><a href="/about">/about</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        5 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="http://localhost:1313/posts/adventures-in-i3-land/">Adventures in i3 land</a>
+      </h1>
+
+      
+        <div class="post-excerpt">Some ramblings about i3 on my old X220.</div>
+      
+
+      
+
+      
+
+      <div class="post-content">
+        <p>As a geek I do like a lot of the modern things. At work I spend my time working
+with device services ranging from cloud services like Intune to things like
+traditional printing in factory floors.</p>
+<p>There is very little that get’s me as exited as opening a box with new hardware
+in it, but from time to time I feel the hardware improvements are eaten alive
+by the ever growing complexity of the software. So while I spend a lot of my
+time reading about new things, I also like to go back in time and take a look
+at what can be done with older hardware instead of throwing it away.</p>
+<p>As an example my daughter is using a Mid 2009 MacBook Pro for her needs at the
+moment. With an SSD and 8Gb of RAM it works a lot better than expected. I have
+a bunch of old ThinkPad’s that have been neglected for quite some time. One of
+them being an old X220, and it is the device I’m writing on at the moment.
+And speaking of writing, the keyboard on this thing is second to none. I’ve
+never typed on a better keyboard than the old Thinkpad’s. They are in my
+personal opinion better than any of the current keyboards and so durable.</p>
+<p><img src="/images/x220-001.jpg" alt="X220-001"></p>
+<p><img src="/images/x220-002.jpg" alt="X220-002"></p>
+<p>Considering this device was released in 2011, almost 10 years ago, it still
+handles what I throw at it extremely well. I did not try Windows 10 in it
+although I think it would have ran decently as well, instead it’s now running
+Debian testing with the i3 window manager. A cold boot from entering the
+encryption password takes about 7 seconds to the desktop. So even by modern
+standards more than decent, in fact a lot faster than my 2018 MacBook Pro and
+even faster than my Surface Laptop 3.</p>
+<h3 id="i3-window-manager">i3 window manager</h3>
+<p>Being fast does come with it’s downsides, if you don’t like them. For me, I
+don’t see it as a downside, quite the opposite. As the hardware is older I set
+out to use something lightweight. Tiling window managers have fascinated me for
+a while now and I thought this hardware could really benefit from one. So
+instead of the large WM’s in Linux I decided to go with i3 and for the login
+screen Slim DM. Both extremely light and extremely configurable.</p>
+<p><img src="/images/x220-scrot-001.png" alt="X220 Screenshot"></p>
+<p>Finding your comfort with a tiling window manager might require some work, at
+least it did for me. As an example there are things that are so wired in my
+brain I have issues trying to change them. One such is the Windows + L key to
+lock the computer. My i3 configuration used the VIM keys to move between open
+windows, meaning H,J,K,L were bind to that movement. I changed them to the
+arrow keys, not perfect, but I do need my Windows + L to lock my session.</p>
+<h3 id="slimlock">Slimlock</h3>
+<p>As I stated above I use Windows + L to lock my screen. This is something really
+wired into my brain, leaving a computer I always do this, needed or not. i3
+has this functionality in i3lock and you can call that to lock your screen. I
+however wanted to use the same nice GUI that Slim provides me on startup.</p>
+<p>I also wanted the system to lock whenever I put my computer to sleep or close
+the lid so slimlock had to be called in those cases as well.</p>
+<p>My i3 config, contains,</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Lock screen</span>
+</span></span><span class="line"><span class="cl">bindsym <span class="nv">$mod</span>+l <span class="nb">exec</span> “slimlock”
+</span></span></code></pre></div><p>and I created the a new file in /etc/systemd/system/i3lock@.service containing;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-systemd" data-lang="systemd"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[Unit]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Description </span><span class="o">=</span><span class="s"> Lock screen when going to sleep/suspend/hibernate</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[Service]</span>
+</span></span><span class="line"><span class="cl"><span class="na">User</span><span class="o">=</span><span class="s">%I</span>
+</span></span><span class="line"><span class="cl"><span class="na">Type</span><span class="o">=</span><span class="s">simple</span>
+</span></span><span class="line"><span class="cl"><span class="na">Environment</span><span class="o">=</span><span class="s">DISPLAY=:0</span>
+</span></span><span class="line"><span class="cl"><span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/bin/slimlock</span>
+</span></span><span class="line"><span class="cl"><span class="na">TimeoutSec</span><span class="o">=</span><span class="s">infinity</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[Install]</span>
+</span></span><span class="line"><span class="cl"><span class="na">WantedBy</span><span class="o">=</span><span class="s">sleep.target</span>
+</span></span><span class="line"><span class="cl"><span class="na">WantedBy</span><span class="o">=</span><span class="s">suspend.target</span>
+</span></span><span class="line"><span class="cl"><span class="na">WantedBy</span><span class="o">=</span><span class="s">hibernate.target</span>
+</span></span></code></pre></div><p>The combination works exactly as I want it to.</p>
+<h2 id="changes-in-hardware">Changes in hardware</h2>
+<p>To make the X220 a bit more modern I added 4Gb of RAM in it. I rarely go over
+4Gb in this but still, as I had some laying around I gave it some additional
+memory. The time of HDD’s in laptops is long gone as well, so I had a Samsung
+860 SSD 1Tb driver on my table I stuffed into the laptop as well. The
+combination of the SSD and 8Gb of RAM makes the X220 fly.</p>
+<p>Before doing anything else I pulled the whole ting into pieces and replaced the
+thermal paste on the CPU, it is as I said 10 years old so it was time to get
+this done. If you have ever taken a Lenovo or IBM ThinkPad apart you start to
+appreciate the way these things are built. No laptop is easy to pull apart but
+with the servicing manuals and no-stress this was a enjoyable moment. I also
+notice the fans rarely spool up after applying some Arctic Silver paste on the
+CPU and putting everything back together.</p>
+<p><img src="/images/x220-003.jpg" alt="X220 maintenance"></p>
+<h2 id="can-you-really-do-something-on-it">Can you really do something on it?</h2>
+<p>Counting the running laptops and desktops in my house I have 5 of them in daily
+use. I really do not work on the X220 but it is able to get things done. I’ve
+tried using many of the tools I use in my daily job on it and so far have not
+had a single issue or noticeable dip in performance. Microsoft Teams is
+probably what I spend the majority of my time collaborating in and it works
+flawlessly on this device. I use O365 for email and documents, and although the
+web-versions of Word, PowerPoint and Visio are not 1:1 with the desktop
+version’s I can still be as effective in them. If I need a Windows desktop I
+can even get into one in our Cloud services meaning I really could make this
+old-timer my daily driver if I wanted to. And for my job when designing
+services for the enterprise, if I can use it from this device then anyone can
+use them from whatever they want.</p>
+<h2 id="whats-next">What&rsquo;s next?</h2>
+<p>I’ve been reading about Coreboot quite a bit, the next step for this old Lenovo
+is to get rid of the old BIOS and clear out as much as possible from the Intel
+Management Engine, I don’t have to, but I want to. Tinkering is still fun.</p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+      
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        1031 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2020-04-11 03:00
+        
+
+         
+          
+        
+      </p>
+    </div>
+
+    
+    <div class="pagination">
+        
+
+        <div class="pagination__buttons">
+            
+            <span class="button previous">
+                <a href="http://localhost:1313/posts/lenovo-x220-and-audio-control-in-i3wm/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">Lenovo X220 audio control in i3wm</span>
+                </a>
+            </span>
+            
+
+            
+            <span class="button next">
+                <a href="http://localhost:1313/posts/scrolling-with-an-external-mouse-on-macos/">
+                    <span class="button__text">Scrolling with an external mouse in MacOS</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2025</span>
+            <span><a href="http://localhost:1313/">Mats Hellman</a></span>
+            <span></span>
+            <span><a href="http://localhost:1313/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            
+        </div>
+    </div>
+    
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span><span>Theme made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.ad54ad97364f77ede35def9096b162bb1f0b3973aa50b080f5e82fa147f6882e2a7200d7535adbf9b51bebf939f1c1ca9bbe6be87530092aca720eac4a226fda.js" integrity="sha512-rVStlzZPd&#43;3jXe&#43;QlrFiux8LOXOqULCA9egvoUf2iC4qcgDXU1rb&#43;bUb6/k58cHKm75r6HUwCSrKcg6sSiJv2g=="></script>
+
+
+
+
+    </body>
+</html>

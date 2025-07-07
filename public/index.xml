@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ramblings of an old geek</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Ramblings of an old geek</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Time to update the blog</title>
+      <link>http://localhost:1313/posts/time-to-update-the-blog/</link>
+      <pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/time-to-update-the-blog/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve looked at my blog from time to time all these years when it&amp;rsquo;s been&#xA;laying dormant. I used to be a active blogger years ago but then life got&#xA;in the way, I did not have the time for it anymore. At the time I was traveling&#xA;more than half the days in a year and updating a blog on the side just&#xA;wasn&amp;rsquo;t doable.&lt;/p&gt;&#xA;&lt;h1 id=&#34;vacation-project&#34;&gt;Vacation project&lt;/h1&gt;&#xA;&lt;p&gt;In Finland everyone working a steady job has at least 5 weeks of vacation.&#xA;Usually we take 4 weeks in the summer and 1 week in the winter. This year the weather isn&amp;rsquo;t great so I decided one of my summer projects when spending time&#xA;inside the house would be getting my blog up and running again.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Issues with Coreboot and a workaround</title>
+      <link>http://localhost:1313/posts/coreboot-issues/</link>
+      <pubDate>Thu, 03 Dec 2020 08:09:26 +0300</pubDate>
+      <guid>http://localhost:1313/posts/coreboot-issues/</guid>
+      <description>&lt;p&gt;A while ago I stole the SSD drive from my Lenovo X220 to use it in another&#xA;device. The poor X220 has been dormant in storage ever since. This week I finally&#xA;had time to install the new drive in it and install Debian testing on it.&lt;/p&gt;&#xA;&lt;h2 id=&#34;oops-we-are-not-booting&#34;&gt;Oops we are not booting&lt;/h2&gt;&#xA;&lt;p&gt;Installation as with any Debian installation is really straight forward, but&#xA;after the installation Coreboot dropped me to the EFI shell instead of booting&#xA;the device correctly.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Thu, 29 Oct 2020 21:05:33 +0530</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h2 id=&#34;whoami&#34;&gt;/whoami&lt;/h2&gt;&#xA;&lt;p&gt;A geek, I really enjoy new technology, mostly because there is always something&#xA;new to learn. I used to work as a Premier Field Engineer at Microsoft&#xA;specializing in Windows and Configuration Manager. The time spent there was&#xA;a lot of fun. Now I work as a IT Manager for a non-profit organization. Less tech, more painting the future. Still having a lot to do with technology and getting to work with the cloud and our on-prem infrastructure.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Blog moving to GitHub</title>
+      <link>http://localhost:1313/posts/moved-to-github/</link>
+      <pubDate>Thu, 29 Oct 2020 08:09:26 +0300</pubDate>
+      <guid>http://localhost:1313/posts/moved-to-github/</guid>
+      <description>&lt;p&gt;It&amp;rsquo;s the time of year when Wordpress.com is reminding me to renew my subscription&#xA;and since I really don&amp;rsquo;t blog as much as I used to back in the days, the price&#xA;is just a bit to high.&lt;/p&gt;&#xA;&lt;h2 id=&#34;hosting-or-not&#34;&gt;Hosting or not?&lt;/h2&gt;&#xA;&lt;p&gt;I started to look for a replacement service, initially I was thinking of hosting&#xA;my it on a virtual server somewhere as that&amp;rsquo;s half the price of Wordpress. True&#xA;that it would make me manage the server but with ansible that would still be&#xA;trivial. First I was looking at &lt;a href=&#34;https://www.linode.com&#34; title=&#34;Linode&#34;&gt;Linode&lt;/a&gt; as the&#xA;cheapest server was only a cup of coffee and this was reasonable for a monthly&#xA;price, and on it run Wordpress like I used to when I was really active.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lenovo X220 audio control in i3wm</title>
+      <link>http://localhost:1313/posts/lenovo-x220-and-audio-control-in-i3wm/</link>
+      <pubDate>Tue, 21 Apr 2020 08:09:26 -0700</pubDate>
+      <guid>http://localhost:1313/posts/lenovo-x220-and-audio-control-in-i3wm/</guid>
+      <description>&lt;p&gt;This will serve as a note to myself as I found myself really looking for it&#xA;every time I redid the device.&lt;/p&gt;&#xA;&lt;p&gt;The Lenovo X220 has audio control buttons above the keyboard and they are nice&#xA;to have working when using the device.&#xA;I use i3-wm myself and I have a old version of my i3 config in my Github,&#xA;yes it’s time to update it as well so I don’t have to do this every time.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Adventures in i3 land</title>
+      <link>http://localhost:1313/posts/adventures-in-i3-land/</link>
+      <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/adventures-in-i3-land/</guid>
+      <description>&lt;p&gt;As a geek I do like a lot of the modern things. At work I spend my time working&#xA;with device services ranging from cloud services like Intune to things like&#xA;traditional printing in factory floors.&lt;/p&gt;&#xA;&lt;p&gt;There is very little that get’s me as exited as opening a box with new hardware&#xA;in it, but from time to time I feel the hardware improvements are eaten alive&#xA;by the ever growing complexity of the software. So while I spend a lot of my&#xA;time reading about new things, I also like to go back in time and take a look&#xA;at what can be done with older hardware instead of throwing it away.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Scrolling with an external mouse in MacOS</title>
+      <link>http://localhost:1313/posts/scrolling-with-an-external-mouse-on-macos/</link>
+      <pubDate>Tue, 03 Dec 2019 08:00:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/scrolling-with-an-external-mouse-on-macos/</guid>
+      <description>&lt;p&gt;If you have used a Mac with an external mouse you know there is something funky&#xA;about this. In MacOS you can not individually select the scroll direction for a&#xA;external mouse vs the trackpad. The trackpad when you want to scroll down a page&#xA;you basically drag trough it and it’s a very natural motion, this however means&#xA;that the scroll wheel on your external mouse will go the opposite way, whoever&#xA;came up with this should work on a chair with nails for a few years.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MacOS black screen after sleep</title>
+      <link>http://localhost:1313/posts/macos-black-screen-after-sleep/</link>
+      <pubDate>Tue, 03 Dec 2019 06:00:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/macos-black-screen-after-sleep/</guid>
+      <description>&lt;p&gt;Yesterday I decided it was time to upgrade my MacBook Pro 2018 from Mojave to&#xA;Catalina. Easy update but in the future if someone tells you Windows 10 upgrades&#xA;are slow, ask them to try it on a Mac. I can update all Windows devices in my&#xA;house one by one faster than my Mac from 10.14 to 10.15.&lt;/p&gt;&#xA;&lt;p&gt;Anyhow, this was not a post to beat down my Mac, I do still like parts of you 😀&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MacOS : Unhide dock faster</title>
+      <link>http://localhost:1313/posts/macos-unhide-dock-faster/</link>
+      <pubDate>Mon, 02 Dec 2019 08:00:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/macos-unhide-dock-faster/</guid>
+      <description>&lt;p&gt;As I’ve stated I more or less cross paths almost on a daily basis with all the&#xA;major operating systems. Most of the time my main driver is the 2018 MacBook Pro&#xA;which is with me whenever I leave the comfort of the home-office.&lt;/p&gt;&#xA;&lt;p&gt;Although the resolution is good on this device the dock at the bottom takes up&#xA;a bit of space. I must say I’m not a heavy dock user, I’ve learnt long ago to&#xA;use CMD+Space to find my applications, just like I use the Windows key in&#xA;Windows 10 and MOD+D in my i3wm on Arch Linux. In my normal configuration I keep&#xA;the dock hidden and if you keep the default values you, for a split second,&#xA;wonder if it’s coming out at all. So, tweaking it to appear faster felt like a&#xA;good idea. Three commands later and we are done. As always, this blog is mostly&#xA;so I don’t have to search information on this again and try to find my personal&#xA;sweetspot.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hey, where&#39;s my Yubikey?</title>
+      <link>http://localhost:1313/posts/hey-wheres-my-yubikey/</link>
+      <pubDate>Fri, 22 Nov 2019 08:00:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/hey-wheres-my-yubikey/</guid>
+      <description>&lt;p&gt;This post is just for myself to remember this as it was behind so many clicks&#xA;on the oh so phenomenal &lt;a href=&#34;https://wiki.archlinux.org&#34; title=&#34;ArchLinux Wiki&#34;&gt;ArchWiki&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;For many years I have been using multifactor authentication where possible.&#xA;SMS in the beginning and today mostly authenticator application(s) or the&#xA;Yubikey(s). These together with a decent password manager make me feel at least&#xA;a bit more secure with all the accounts and passwords I need to remember.&#xA;If you are looking for a password manager to help make your life a bit laid back&#xA;when it comes to password management I recommend you take a look at&#xA;&lt;a href=&#34;https://bitwarden.com&#34; title=&#34;Bitwarden Password Manager&#34;&gt;BitWarden&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Nixadmins.net back from hiatus</title>
+      <link>http://localhost:1313/posts/nixadmins-back-from-hiatus/</link>
+      <pubDate>Thu, 21 Nov 2019 08:00:00 +0300</pubDate>
+      <guid>http://localhost:1313/posts/nixadmins-back-from-hiatus/</guid>
+      <description>&lt;p&gt;I can’t believe it’s now 7 years since I was actively posting content. Why? I&#xA;started as a Field Engineer at Microsoft and could not find the time nor energy&#xA;to keep creating quality content. It’s now a year since I changed my role&#xA;starting as an Architect designing the device journey with all that comes with&#xA;it. With this role in mind my posts in the future will be different, the content&#xA;will be wider than before, meaning I will create posts about the design journeys&#xA;and the architectural view as well. But, as I am still me, and deep inside a&#xA;geek who loves to tinker with things from A-Z the content will also reflect this.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

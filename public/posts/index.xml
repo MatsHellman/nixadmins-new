@@ -1,0 +1,492 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Ramblings of an old geek</title>
+        <link>http://localhost:1313/posts/</link>
+        <description>Recent content in Posts on Ramblings of an old geek</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 07 Jul 2025 00:00:00 +0000</lastBuildDate>
+        <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Time to update the blog</title>
+            <link>http://localhost:1313/posts/time-to-update-the-blog/</link>
+            <pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate>
+            
+            <guid>http://localhost:1313/posts/time-to-update-the-blog/</guid>
+            <description>&lt;p&gt;I&amp;rsquo;ve looked at my blog from time to time all these years when it&amp;rsquo;s been
+laying dormant. I used to be a active blogger years ago but then life got
+in the way, I did not have the time for it anymore. At the time I was traveling
+more than half the days in a year and updating a blog on the side just
+wasn&amp;rsquo;t doable.&lt;/p&gt;
+&lt;h1 id=&#34;vacation-project&#34;&gt;Vacation project&lt;/h1&gt;
+&lt;p&gt;In Finland everyone working a steady job has at least 5 weeks of vacation.
+Usually we take 4 weeks in the summer and 1 week in the winter. This year the weather isn&amp;rsquo;t great so I decided one of my summer projects when spending time
+inside the house would be getting my blog up and running again.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>I&rsquo;ve looked at my blog from time to time all these years when it&rsquo;s been
+laying dormant. I used to be a active blogger years ago but then life got
+in the way, I did not have the time for it anymore. At the time I was traveling
+more than half the days in a year and updating a blog on the side just
+wasn&rsquo;t doable.</p>
+<h1 id="vacation-project">Vacation project</h1>
+<p>In Finland everyone working a steady job has at least 5 weeks of vacation.
+Usually we take 4 weeks in the summer and 1 week in the winter. This year the weather isn&rsquo;t great so I decided one of my summer projects when spending time
+inside the house would be getting my blog up and running again.</p>
+<h2 id="hugo">Hugo</h2>
+<p>In 2020 I moved my blog from Wordpress.com to a github and started using Hugo to create the pages. 5 years later I have no idea how I set it up. I tried creating a new page and publishing it to the site but that did not work.</p>
+<p>Since I had to relearn the process I decided to go hunting for a nice minimal theme to start form and redo the whole page. This would also allow me to recreate the whole publisihing process and I could refamliarize myself with hugo an the tools I use.</p>
+<h2 id="setting-up">Setting up</h2>
+<p>If you look at some of my older posts you will see I&rsquo;m running Linux on my home devices and that hasn&rsquo;t changed. I&rsquo;m running Arch Linux (BTW) on my main rig
+which is used for most my private computing, be it gaming or small code projects.</p>
+<p>To get Hugo running on Arch is easy like most things on Arch. Since the setup
+is done and the base theme has been chosen it&rsquo;s time to start modifying the
+theme to suit my needs and start recreating some of the still usable blogposts
+I had published back when my blog was getting weekly updates.</p>
+<p>Even though I&rsquo;m aiming on beeing more active with the writing the reason for writing still aplies. I do it to keep my notes in a place I can easily lookup and have others lookup when needed.</p>
+<p>Let&rsquo;s see what the future brings.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Issues with Coreboot and a workaround</title>
+            <link>http://localhost:1313/posts/coreboot-issues/</link>
+            <pubDate>Thu, 03 Dec 2020 08:09:26 +0300</pubDate>
+            
+            <guid>http://localhost:1313/posts/coreboot-issues/</guid>
+            <description>&lt;p&gt;A while ago I stole the SSD drive from my Lenovo X220 to use it in another
+device. The poor X220 has been dormant in storage ever since. This week I finally
+had time to install the new drive in it and install Debian testing on it.&lt;/p&gt;
+&lt;h2 id=&#34;oops-we-are-not-booting&#34;&gt;Oops we are not booting&lt;/h2&gt;
+&lt;p&gt;Installation as with any Debian installation is really straight forward, but
+after the installation Coreboot dropped me to the EFI shell instead of booting
+the device correctly.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>A while ago I stole the SSD drive from my Lenovo X220 to use it in another
+device. The poor X220 has been dormant in storage ever since. This week I finally
+had time to install the new drive in it and install Debian testing on it.</p>
+<h2 id="oops-we-are-not-booting">Oops we are not booting</h2>
+<p>Installation as with any Debian installation is really straight forward, but
+after the installation Coreboot dropped me to the EFI shell instead of booting
+the device correctly.</p>
+<p>Going to duckduckgo for information I found this article on Reddit,<br>
+<a href="https://www.reddit.com/r/linux4noobs/comments/7iwhee/guide_hack_together_a_functioning_efi_boot_using/">https://www.reddit.com/r/linux4noobs/comments/7iwhee/guide_hack_together_a_functioning_efi_boot_using/</a></p>
+<p>All the information is in the link, but to make sure I have it available in the future for myself I will document it here as well.</p>
+<p>To get the device to boot at all, run the command <em>map</em> in the EFI shell, this will show you all the devices EFI can see.<br>
+I did not look at the BLK devices only fsN, in my case fs0 was the correct one. So using that as a base let&rsquo;s kick of the boot.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ fs0:<span class="se">\E</span>FI<span class="se">\d</span>ebian<span class="se">\g</span>rubx64.efi
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  $ sudo bash <span class="c1">#enter a root shell</span>
+</span></span><span class="line"><span class="cl">  $ mkdir /boot/efi/EFI/BOOT <span class="c1">#create the default directory where coreboot is looking</span>
+</span></span><span class="line"><span class="cl">  $ cp /boot/efi/EFI/debian/* /boot/efi/EFI/BOOT/ <span class="c1">#copy the EFI bits to the directory</span>
+</span></span><span class="line"><span class="cl">  $ cp /boot/efi/EFI/BOOT/grubx64.efi /boot/efi/EFI/BOOT/bootx64.efi <span class="c1">#copy or rename efi file to bootx64 instead of grubx.</span>
+</span></span></code></pre></div><p>This will allow you device to boot but with every reset you will have to follow this through. I guess the same goes if you upgrade some of the boot related components, like grub as the updates will not end up in the correct directory. So don&rsquo;t see this as a fix, it&rsquo;s a workaround.<br>
+I will continue to look for a more premanent solution for the issue but for now I can boot my X220 and that does lower the urgency of the issue.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Blog moving to GitHub</title>
+            <link>http://localhost:1313/posts/moved-to-github/</link>
+            <pubDate>Thu, 29 Oct 2020 08:09:26 +0300</pubDate>
+            
+            <guid>http://localhost:1313/posts/moved-to-github/</guid>
+            <description>&lt;p&gt;It&amp;rsquo;s the time of year when Wordpress.com is reminding me to renew my subscription
+and since I really don&amp;rsquo;t blog as much as I used to back in the days, the price
+is just a bit to high.&lt;/p&gt;
+&lt;h2 id=&#34;hosting-or-not&#34;&gt;Hosting or not?&lt;/h2&gt;
+&lt;p&gt;I started to look for a replacement service, initially I was thinking of hosting
+my it on a virtual server somewhere as that&amp;rsquo;s half the price of Wordpress. True
+that it would make me manage the server but with ansible that would still be
+trivial. First I was looking at &lt;a href=&#34;https://www.linode.com&#34; title=&#34;Linode&#34;&gt;Linode&lt;/a&gt; as the
+cheapest server was only a cup of coffee and this was reasonable for a monthly
+price, and on it run Wordpress like I used to when I was really active.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>It&rsquo;s the time of year when Wordpress.com is reminding me to renew my subscription
+and since I really don&rsquo;t blog as much as I used to back in the days, the price
+is just a bit to high.</p>
+<h2 id="hosting-or-not">Hosting or not?</h2>
+<p>I started to look for a replacement service, initially I was thinking of hosting
+my it on a virtual server somewhere as that&rsquo;s half the price of Wordpress. True
+that it would make me manage the server but with ansible that would still be
+trivial. First I was looking at <a href="https://www.linode.com" title="Linode">Linode</a> as the
+cheapest server was only a cup of coffee and this was reasonable for a monthly
+price, and on it run Wordpress like I used to when I was really active.</p>
+<p>As it sometimes happens, curiosity kicked in and I stared digging into static
+site generators. And the simplicity they bring was pulling me in. I already
+use MarkDown for a lot and looking at <a href="https://gohugo.io" title="Hugo">Hugo</a> made
+me even more curious if I could run everything from it.</p>
+<p>Done and dusted, easy local installation with <a href="https://brew.sh" title="Homebrew">Brew</a>
+was screaming go,go, gooooo.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ brew install hugo
+</span></span></code></pre></div><p>Now the hosting, should it run on my rented hardware or not. After some
+consideration I decided to try Github pages, for now this will be the solution
+although I might change that in the future if I want to have a server running
+somewhere again.</p>
+<h2 id="can-it-be-this-simple">Can it be this simple?</h2>
+<p>After installing and initializing my site locally I copied my blogposts from
+wordpress to .md files. The simplicity is just amazing. The biggest headache I
+had was to find a simple engough theme to use. After some trials I ended up with
+<a href="https://themes.gohugo.io/etch/" title="Hugo Etch Theme">Etch</a>. It was simple enough
+and I was able to get the few changes done I wanted.</p>
+<p>The use of git and Github is also extremely nice, it just fits in my workflow.
+Fits like a glove some would say, while we Finns say &ldquo;Fits like a fist in the eye&rdquo;.
+I can keep everything with me all the time, and when I change to a new device
+everything is seconds away.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Lenovo X220 audio control in i3wm</title>
+            <link>http://localhost:1313/posts/lenovo-x220-and-audio-control-in-i3wm/</link>
+            <pubDate>Tue, 21 Apr 2020 08:09:26 -0700</pubDate>
+            
+            <guid>http://localhost:1313/posts/lenovo-x220-and-audio-control-in-i3wm/</guid>
+            <description>&lt;p&gt;This will serve as a note to myself as I found myself really looking for it
+every time I redid the device.&lt;/p&gt;
+&lt;p&gt;The Lenovo X220 has audio control buttons above the keyboard and they are nice
+to have working when using the device.
+I use i3-wm myself and I have a old version of my i3 config in my Github,
+yes it’s time to update it as well so I don’t have to do this every time.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>This will serve as a note to myself as I found myself really looking for it
+every time I redid the device.</p>
+<p>The Lenovo X220 has audio control buttons above the keyboard and they are nice
+to have working when using the device.
+I use i3-wm myself and I have a old version of my i3 config in my Github,
+yes it’s time to update it as well so I don’t have to do this every time.</p>
+<p>Anyway, this time the writing is for Debian, I’m using the testing version but
+I would assume this works in any of them. First and foremost, I am using the
+kernel module thinkpad_acpi and alsa, if you are using pulseaudio you need to
+look for the commands for that.</p>
+<p>In my i3-config I have the following</p>
+<h3 id="audio-setting">Audio setting</h3>
+<p>bindsym XF86AudioRaiseVolume exec “amixer -q sset Master,0 1+ unmute”<br>
+bindsym XF86AudioLowerVolume exec “amixer -q sset Master,0 1- unmute”<br>
+bindsym XF86AudioMute exec “amixer -q sset Master,0 toggle”</p>
+<p>Reload your i3 config and you should see the mute led turn on and of as you press it.
+Volume up and down works as well.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Adventures in i3 land</title>
+            <link>http://localhost:1313/posts/adventures-in-i3-land/</link>
+            <pubDate>Sat, 11 Apr 2020 00:00:00 +0000</pubDate>
+            
+            <guid>http://localhost:1313/posts/adventures-in-i3-land/</guid>
+            <description>&lt;p&gt;As a geek I do like a lot of the modern things. At work I spend my time working
+with device services ranging from cloud services like Intune to things like
+traditional printing in factory floors.&lt;/p&gt;
+&lt;p&gt;There is very little that get’s me as exited as opening a box with new hardware
+in it, but from time to time I feel the hardware improvements are eaten alive
+by the ever growing complexity of the software. So while I spend a lot of my
+time reading about new things, I also like to go back in time and take a look
+at what can be done with older hardware instead of throwing it away.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>As a geek I do like a lot of the modern things. At work I spend my time working
+with device services ranging from cloud services like Intune to things like
+traditional printing in factory floors.</p>
+<p>There is very little that get’s me as exited as opening a box with new hardware
+in it, but from time to time I feel the hardware improvements are eaten alive
+by the ever growing complexity of the software. So while I spend a lot of my
+time reading about new things, I also like to go back in time and take a look
+at what can be done with older hardware instead of throwing it away.</p>
+<p>As an example my daughter is using a Mid 2009 MacBook Pro for her needs at the
+moment. With an SSD and 8Gb of RAM it works a lot better than expected. I have
+a bunch of old ThinkPad’s that have been neglected for quite some time. One of
+them being an old X220, and it is the device I’m writing on at the moment.
+And speaking of writing, the keyboard on this thing is second to none. I’ve
+never typed on a better keyboard than the old Thinkpad’s. They are in my
+personal opinion better than any of the current keyboards and so durable.</p>
+<p><img src="/images/x220-001.jpg" alt="X220-001"></p>
+<p><img src="/images/x220-002.jpg" alt="X220-002"></p>
+<p>Considering this device was released in 2011, almost 10 years ago, it still
+handles what I throw at it extremely well. I did not try Windows 10 in it
+although I think it would have ran decently as well, instead it’s now running
+Debian testing with the i3 window manager. A cold boot from entering the
+encryption password takes about 7 seconds to the desktop. So even by modern
+standards more than decent, in fact a lot faster than my 2018 MacBook Pro and
+even faster than my Surface Laptop 3.</p>
+<h3 id="i3-window-manager">i3 window manager</h3>
+<p>Being fast does come with it’s downsides, if you don’t like them. For me, I
+don’t see it as a downside, quite the opposite. As the hardware is older I set
+out to use something lightweight. Tiling window managers have fascinated me for
+a while now and I thought this hardware could really benefit from one. So
+instead of the large WM’s in Linux I decided to go with i3 and for the login
+screen Slim DM. Both extremely light and extremely configurable.</p>
+<p><img src="/images/x220-scrot-001.png" alt="X220 Screenshot"></p>
+<p>Finding your comfort with a tiling window manager might require some work, at
+least it did for me. As an example there are things that are so wired in my
+brain I have issues trying to change them. One such is the Windows + L key to
+lock the computer. My i3 configuration used the VIM keys to move between open
+windows, meaning H,J,K,L were bind to that movement. I changed them to the
+arrow keys, not perfect, but I do need my Windows + L to lock my session.</p>
+<h3 id="slimlock">Slimlock</h3>
+<p>As I stated above I use Windows + L to lock my screen. This is something really
+wired into my brain, leaving a computer I always do this, needed or not. i3
+has this functionality in i3lock and you can call that to lock your screen. I
+however wanted to use the same nice GUI that Slim provides me on startup.</p>
+<p>I also wanted the system to lock whenever I put my computer to sleep or close
+the lid so slimlock had to be called in those cases as well.</p>
+<p>My i3 config, contains,</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Lock screen</span>
+</span></span><span class="line"><span class="cl">bindsym <span class="nv">$mod</span>+l <span class="nb">exec</span> “slimlock”
+</span></span></code></pre></div><p>and I created the a new file in /etc/systemd/system/i3lock@.service containing;</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-systemd" data-lang="systemd"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[Unit]</span>
+</span></span><span class="line"><span class="cl"><span class="na">Description </span><span class="o">=</span><span class="s"> Lock screen when going to sleep/suspend/hibernate</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[Service]</span>
+</span></span><span class="line"><span class="cl"><span class="na">User</span><span class="o">=</span><span class="s">%I</span>
+</span></span><span class="line"><span class="cl"><span class="na">Type</span><span class="o">=</span><span class="s">simple</span>
+</span></span><span class="line"><span class="cl"><span class="na">Environment</span><span class="o">=</span><span class="s">DISPLAY=:0</span>
+</span></span><span class="line"><span class="cl"><span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/bin/slimlock</span>
+</span></span><span class="line"><span class="cl"><span class="na">TimeoutSec</span><span class="o">=</span><span class="s">infinity</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">[Install]</span>
+</span></span><span class="line"><span class="cl"><span class="na">WantedBy</span><span class="o">=</span><span class="s">sleep.target</span>
+</span></span><span class="line"><span class="cl"><span class="na">WantedBy</span><span class="o">=</span><span class="s">suspend.target</span>
+</span></span><span class="line"><span class="cl"><span class="na">WantedBy</span><span class="o">=</span><span class="s">hibernate.target</span>
+</span></span></code></pre></div><p>The combination works exactly as I want it to.</p>
+<h2 id="changes-in-hardware">Changes in hardware</h2>
+<p>To make the X220 a bit more modern I added 4Gb of RAM in it. I rarely go over
+4Gb in this but still, as I had some laying around I gave it some additional
+memory. The time of HDD’s in laptops is long gone as well, so I had a Samsung
+860 SSD 1Tb driver on my table I stuffed into the laptop as well. The
+combination of the SSD and 8Gb of RAM makes the X220 fly.</p>
+<p>Before doing anything else I pulled the whole ting into pieces and replaced the
+thermal paste on the CPU, it is as I said 10 years old so it was time to get
+this done. If you have ever taken a Lenovo or IBM ThinkPad apart you start to
+appreciate the way these things are built. No laptop is easy to pull apart but
+with the servicing manuals and no-stress this was a enjoyable moment. I also
+notice the fans rarely spool up after applying some Arctic Silver paste on the
+CPU and putting everything back together.</p>
+<p><img src="/images/x220-003.jpg" alt="X220 maintenance"></p>
+<h2 id="can-you-really-do-something-on-it">Can you really do something on it?</h2>
+<p>Counting the running laptops and desktops in my house I have 5 of them in daily
+use. I really do not work on the X220 but it is able to get things done. I’ve
+tried using many of the tools I use in my daily job on it and so far have not
+had a single issue or noticeable dip in performance. Microsoft Teams is
+probably what I spend the majority of my time collaborating in and it works
+flawlessly on this device. I use O365 for email and documents, and although the
+web-versions of Word, PowerPoint and Visio are not 1:1 with the desktop
+version’s I can still be as effective in them. If I need a Windows desktop I
+can even get into one in our Cloud services meaning I really could make this
+old-timer my daily driver if I wanted to. And for my job when designing
+services for the enterprise, if I can use it from this device then anyone can
+use them from whatever they want.</p>
+<h2 id="whats-next">What&rsquo;s next?</h2>
+<p>I’ve been reading about Coreboot quite a bit, the next step for this old Lenovo
+is to get rid of the old BIOS and clear out as much as possible from the Intel
+Management Engine, I don’t have to, but I want to. Tinkering is still fun.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Scrolling with an external mouse in MacOS</title>
+            <link>http://localhost:1313/posts/scrolling-with-an-external-mouse-on-macos/</link>
+            <pubDate>Tue, 03 Dec 2019 08:00:00 +0300</pubDate>
+            
+            <guid>http://localhost:1313/posts/scrolling-with-an-external-mouse-on-macos/</guid>
+            <description>&lt;p&gt;If you have used a Mac with an external mouse you know there is something funky
+about this. In MacOS you can not individually select the scroll direction for a
+external mouse vs the trackpad. The trackpad when you want to scroll down a page
+you basically drag trough it and it’s a very natural motion, this however means
+that the scroll wheel on your external mouse will go the opposite way, whoever
+came up with this should work on a chair with nails for a few years.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>If you have used a Mac with an external mouse you know there is something funky
+about this. In MacOS you can not individually select the scroll direction for a
+external mouse vs the trackpad. The trackpad when you want to scroll down a page
+you basically drag trough it and it’s a very natural motion, this however means
+that the scroll wheel on your external mouse will go the opposite way, whoever
+came up with this should work on a chair with nails for a few years.</p>
+<p>It’s a totally unnatural way to scroll up on the mouse-wheel when you want to go
+down on the page, I mean, WTF.</p>
+<p>Anyway, as always some nice folks created an app (I really wish I could do this
+in the operating system like any other decent operating system but no, it’s an
+app) to reverse the scrolling. You can set it to reverse the trackpad as well
+but I guess then you could just have the normal setting for the mouse and the
+trackpad would be the opposite. Anyway, let’s not get stuck on this.</p>
+<p>I wanted my mouse-wheel to scroll properly as I switch between Windows, Linux
+and Mac all the time and I really can’t get my muscle memory to work this way.</p>
+<p>Hallelujah, the fix is here, Scroll Reverser. You can either download it from
+the the link or if you, like me, use Homebrew you can just run:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ brew cask install scroll-reverser
+</span></span></code></pre></div><p><img src="/images/scroll-rev-001.png" alt="Scroll Reverser"></p>
+<p>It’s a really really simple app but it makes my life worth living again as I
+can scroll up and down the way you should be able to do.</p>
+<p>If you do get this and, like me, feel it’s an essential tool to be able to work
+with an external mouse (and no, I will not get an external trackpad), then do
+not forget to drop the developers a donation. After all, they made life worth
+living again.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>MacOS black screen after sleep</title>
+            <link>http://localhost:1313/posts/macos-black-screen-after-sleep/</link>
+            <pubDate>Tue, 03 Dec 2019 06:00:00 +0300</pubDate>
+            
+            <guid>http://localhost:1313/posts/macos-black-screen-after-sleep/</guid>
+            <description>&lt;p&gt;Yesterday I decided it was time to upgrade my MacBook Pro 2018 from Mojave to
+Catalina. Easy update but in the future if someone tells you Windows 10 upgrades
+are slow, ask them to try it on a Mac. I can update all Windows devices in my
+house one by one faster than my Mac from 10.14 to 10.15.&lt;/p&gt;
+&lt;p&gt;Anyhow, this was not a post to beat down my Mac, I do still like parts of you 😀&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>Yesterday I decided it was time to upgrade my MacBook Pro 2018 from Mojave to
+Catalina. Easy update but in the future if someone tells you Windows 10 upgrades
+are slow, ask them to try it on a Mac. I can update all Windows devices in my
+house one by one faster than my Mac from 10.14 to 10.15.</p>
+<p>Anyhow, this was not a post to beat down my Mac, I do still like parts of you 😀</p>
+<p>After the installation was done all was well with my applications, homebrew kept
+working and everything appeared to be just fine. Until this morning, like most
+mornings I pulled my Mac and opened the lid waiting for the screen to light up,
+but no. Touchbar (the worst idea ever by the way) was active but the screen was
+black. After my first meetings of the day it was time to test if this still
+happened. And yes, it did.</p>
+<p>Some digging on the web and someone even had a fix to re-install the operating
+system… What the … I’m not going to re-install. Haven’t reinstalled any of my
+other computers either and hopefully the Mac is not this unstable that you have
+to re-install just for an upgrade when the Windows installations are fine after
+years and years of upgrades and Linux installations even more so.</p>
+<p>The one common thing I found was that most fixes were deleting .kext files,
+kernel extensions. Some even mentioned the specific files to delete, I however
+did not have any of them but what I did have on my Mac was the DisplayLink
+software as I use it with my Lenovo USB-C docking station. All is fair in war
+and computer issues so:</p>
+<p>Go to your applications folder and look up DisplayLink,
+then run the Uninstaller.</p>
+<p>It will ask you to reboot so you should, once done go find the latest driver
+from <a href="https://displaylink.com" title="Displaylink">Displaylink.com</a>. Install it, reboot and your black screen should be gone.
+This of-course assumes you had DisplayLink installed in the first place :D.</p>
+<p>As always the writing here is mostly notes for myself. If you had success with
+the above, enjoy and you are welcome.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>MacOS : Unhide dock faster</title>
+            <link>http://localhost:1313/posts/macos-unhide-dock-faster/</link>
+            <pubDate>Mon, 02 Dec 2019 08:00:00 +0300</pubDate>
+            
+            <guid>http://localhost:1313/posts/macos-unhide-dock-faster/</guid>
+            <description>&lt;p&gt;As I’ve stated I more or less cross paths almost on a daily basis with all the
+major operating systems. Most of the time my main driver is the 2018 MacBook Pro
+which is with me whenever I leave the comfort of the home-office.&lt;/p&gt;
+&lt;p&gt;Although the resolution is good on this device the dock at the bottom takes up
+a bit of space. I must say I’m not a heavy dock user, I’ve learnt long ago to
+use CMD+Space to find my applications, just like I use the Windows key in
+Windows 10 and MOD+D in my i3wm on Arch Linux. In my normal configuration I keep
+the dock hidden and if you keep the default values you, for a split second,
+wonder if it’s coming out at all. So, tweaking it to appear faster felt like a
+good idea. Three commands later and we are done. As always, this blog is mostly
+so I don’t have to search information on this again and try to find my personal
+sweetspot.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>As I’ve stated I more or less cross paths almost on a daily basis with all the
+major operating systems. Most of the time my main driver is the 2018 MacBook Pro
+which is with me whenever I leave the comfort of the home-office.</p>
+<p>Although the resolution is good on this device the dock at the bottom takes up
+a bit of space. I must say I’m not a heavy dock user, I’ve learnt long ago to
+use CMD+Space to find my applications, just like I use the Windows key in
+Windows 10 and MOD+D in my i3wm on Arch Linux. In my normal configuration I keep
+the dock hidden and if you keep the default values you, for a split second,
+wonder if it’s coming out at all. So, tweaking it to appear faster felt like a
+good idea. Three commands later and we are done. As always, this blog is mostly
+so I don’t have to search information on this again and try to find my personal
+sweetspot.</p>
+<p>Open a terminal and run the following commands, in the following order:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ defaults write com.apple.dock autohide-delay -float <span class="m">0</span>  
+</span></span><span class="line"><span class="cl">$ defaults write com.apple.dock autohide-time-modifier -float 0.5  
+</span></span><span class="line"><span class="cl">$ killall Dock  
+</span></span></code></pre></div><p>Now it does not feel like the Dock is stuck in mud somewhere, it actually
+appears fast enough the few times I really need it.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Hey, where&#39;s my Yubikey?</title>
+            <link>http://localhost:1313/posts/hey-wheres-my-yubikey/</link>
+            <pubDate>Fri, 22 Nov 2019 08:00:00 +0300</pubDate>
+            
+            <guid>http://localhost:1313/posts/hey-wheres-my-yubikey/</guid>
+            <description>&lt;p&gt;This post is just for myself to remember this as it was behind so many clicks
+on the oh so phenomenal &lt;a href=&#34;https://wiki.archlinux.org&#34; title=&#34;ArchLinux Wiki&#34;&gt;ArchWiki&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For many years I have been using multifactor authentication where possible.
+SMS in the beginning and today mostly authenticator application(s) or the
+Yubikey(s). These together with a decent password manager make me feel at least
+a bit more secure with all the accounts and passwords I need to remember.
+If you are looking for a password manager to help make your life a bit laid back
+when it comes to password management I recommend you take a look at
+&lt;a href=&#34;https://bitwarden.com&#34; title=&#34;Bitwarden Password Manager&#34;&gt;BitWarden&lt;/a&gt;.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>This post is just for myself to remember this as it was behind so many clicks
+on the oh so phenomenal <a href="https://wiki.archlinux.org" title="ArchLinux Wiki">ArchWiki</a>.</p>
+<p>For many years I have been using multifactor authentication where possible.
+SMS in the beginning and today mostly authenticator application(s) or the
+Yubikey(s). These together with a decent password manager make me feel at least
+a bit more secure with all the accounts and passwords I need to remember.
+If you are looking for a password manager to help make your life a bit laid back
+when it comes to password management I recommend you take a look at
+<a href="https://bitwarden.com" title="Bitwarden Password Manager">BitWarden</a>.</p>
+<h2 id="problems-">Problems &hellip;</h2>
+<p>Some nights ago I decided to install Arch Linux on one of my workstations. Easy
+and fast installation with a very customizable system, what’s there not to like 😀</p>
+<p>Since the system is so highly customizable, you need to read. And I do really
+love learning something new, I just have an issue remembering a week down the
+line what I did. So that’s why this post is here. This way I can find it fast
+the next time I need it.</p>
+<p>So, the problem was that my Yubikey did not show up in Firefox. First thing
+first you always check dmesg to make sure the device is even recognized.
+And so I did,</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">usb 1-2: new full-speed USB device number <span class="m">5</span> using xhci_hcd  
+</span></span><span class="line"><span class="cl">usb 1-2: New USB device found, <span class="nv">idVendor</span><span class="o">=</span>1050, <span class="nv">idProduct</span><span class="o">=</span>0120, <span class="nv">bcdDevice</span><span class="o">=</span> 5.02  
+</span></span><span class="line"><span class="cl">usb 1-2: New USB device strings: <span class="nv">Mfr</span><span class="o">=</span>1, <span class="nv">Product</span><span class="o">=</span>2, <span class="nv">SerialNumber</span><span class="o">=</span><span class="m">0</span>  
+</span></span><span class="line"><span class="cl">usb 1-2: Product: Security Key by Yubico  
+</span></span><span class="line"><span class="cl">usb 1-2: Manufacturer: Yubico
+</span></span></code></pre></div><p>And there it was. At least my system knew about it. Some
+<a href="https://duckduckgo.com" title="DuckDuckGo">duckduckgo.com:fu</a>
+later I found an article on
+<a href="https://wiki.archlinux.org/index.php/Firefox/Tweaks#Fido_U2F_authentication" title="ArchWiki Link">ArchWiki Fido U2F authentication</a>
+pointing me to the
+libu2f-host package. Easy as 1,2,3 fire up pacman install the package and
+restart the browser and my Yubikey is back in business.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ sudo pacman -S libu2f-host  
+</span></span><span class="line"><span class="cl">resolving dependencies...  
+</span></span><span class="line"><span class="cl">looking <span class="k">for</span> conflicting packages...  
+</span></span></code></pre></div><p>This as stated above is not meant to be a guide on MFA or the Yubikey, just a
+placeholder for me to remember what I did if I ever run into it again.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Nixadmins.net back from hiatus</title>
+            <link>http://localhost:1313/posts/nixadmins-back-from-hiatus/</link>
+            <pubDate>Thu, 21 Nov 2019 08:00:00 +0300</pubDate>
+            
+            <guid>http://localhost:1313/posts/nixadmins-back-from-hiatus/</guid>
+            <description>&lt;p&gt;I can’t believe it’s now 7 years since I was actively posting content. Why? I
+started as a Field Engineer at Microsoft and could not find the time nor energy
+to keep creating quality content. It’s now a year since I changed my role
+starting as an Architect designing the device journey with all that comes with
+it. With this role in mind my posts in the future will be different, the content
+will be wider than before, meaning I will create posts about the design journeys
+and the architectural view as well. But, as I am still me, and deep inside a
+geek who loves to tinker with things from A-Z the content will also reflect this.&lt;/p&gt;</description>
+            <content type="html"><![CDATA[<p>I can’t believe it’s now 7 years since I was actively posting content. Why? I
+started as a Field Engineer at Microsoft and could not find the time nor energy
+to keep creating quality content. It’s now a year since I changed my role
+starting as an Architect designing the device journey with all that comes with
+it. With this role in mind my posts in the future will be different, the content
+will be wider than before, meaning I will create posts about the design journeys
+and the architectural view as well. But, as I am still me, and deep inside a
+geek who loves to tinker with things from A-Z the content will also reflect this.</p>
+<p>In my daily life I’m now more or less in multiple platforms, using Windows,
+MacOS and Linux in my daily life. Some posts will be deep in a technology sense
+while others might offer you high level views on services I am working on in my
+daily life.</p>
+<p>I will not commit to a schedule as this site still mostly notes on my personal
+ramblings and trying to answer questions I get in my daily life.</p>
+<p>First up will be recreation of some of the former posts as I have lost my
+backups from my previous site in 2013. Some of them were extremely popular
+and I still haven’t found a good  replacement for them.</p>
+<p>//Mats</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

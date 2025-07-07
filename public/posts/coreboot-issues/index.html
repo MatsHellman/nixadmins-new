@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Mats Hellman">
+<meta name="description" content="Fresh installation of Debian refuses to boot automatically with Coreboot." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="http://localhost:1313/posts/coreboot-issues/" />
+
+
+    <title>
+        
+            Issues with Coreboot and a workaround :: Ramblings of an old geek 
+        
+    </title>
+
+
+
+
+
+  <link rel="stylesheet" href="/main.min.07ea7ac7da67e2e153a7dfa2457bc6a19cca824288d175e223fadc579041bc51.css" integrity="sha256-B&#43;p6x9pn4uFTp9&#43;iRXvGoZzKgkKI0XXiI/rcV5BBvFE=" crossorigin="anonymous">
+
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+
+  <meta itemprop="name" content="Issues with Coreboot and a workaround">
+  <meta itemprop="description" content="Fresh installation of Debian refuses to boot automatically with Coreboot.">
+  <meta itemprop="datePublished" content="2020-12-03T08:09:26+03:00">
+  <meta itemprop="dateModified" content="2020-12-03T08:09:26+03:00">
+  <meta itemprop="wordCount" content="303">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Issues with Coreboot and a workaround">
+  <meta name="twitter:description" content="Fresh installation of Debian refuses to boot automatically with Coreboot.">
+
+
+
+    <meta property="og:url" content="http://localhost:1313/posts/coreboot-issues/">
+  <meta property="og:site_name" content="Ramblings of an old geek">
+  <meta property="og:title" content="Issues with Coreboot and a workaround">
+  <meta property="og:description" content="Fresh installation of Debian refuses to boot automatically with Coreboot.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2020-12-03T08:09:26+03:00">
+    <meta property="article:modified_time" content="2020-12-03T08:09:26+03:00">
+
+
+
+
+
+
+    <meta property="article:published_time" content="2020-12-03 08:09:26 &#43;0300 &#43;0300" />
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text ">
+                mbh@nixadmins #&gt;</span>
+            <span class="logo__cursor" style=
+                  "
+                   background-color:#4AF626;
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/">/home</a></li><li><a href="/about">/about</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+  <main class="post">
+
+    <div class="post-info">
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        2 minutes
+
+        
+      </p>
+    </div>
+
+    <article>
+      <h1 class="post-title">
+        <a href="http://localhost:1313/posts/coreboot-issues/">Issues with Coreboot and a workaround</a>
+      </h1>
+
+      
+        <div class="post-excerpt">Fresh installation of Debian refuses to boot automatically with Coreboot.</div>
+      
+
+      
+
+      
+
+      <div class="post-content">
+        <p>A while ago I stole the SSD drive from my Lenovo X220 to use it in another
+device. The poor X220 has been dormant in storage ever since. This week I finally
+had time to install the new drive in it and install Debian testing on it.</p>
+<h2 id="oops-we-are-not-booting">Oops we are not booting</h2>
+<p>Installation as with any Debian installation is really straight forward, but
+after the installation Coreboot dropped me to the EFI shell instead of booting
+the device correctly.</p>
+<p>Going to duckduckgo for information I found this article on Reddit,<br>
+<a href="https://www.reddit.com/r/linux4noobs/comments/7iwhee/guide_hack_together_a_functioning_efi_boot_using/">https://www.reddit.com/r/linux4noobs/comments/7iwhee/guide_hack_together_a_functioning_efi_boot_using/</a></p>
+<p>All the information is in the link, but to make sure I have it available in the future for myself I will document it here as well.</p>
+<p>To get the device to boot at all, run the command <em>map</em> in the EFI shell, this will show you all the devices EFI can see.<br>
+I did not look at the BLK devices only fsN, in my case fs0 was the correct one. So using that as a base let&rsquo;s kick of the boot.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ fs0:<span class="se">\E</span>FI<span class="se">\d</span>ebian<span class="se">\g</span>rubx64.efi
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  $ sudo bash <span class="c1">#enter a root shell</span>
+</span></span><span class="line"><span class="cl">  $ mkdir /boot/efi/EFI/BOOT <span class="c1">#create the default directory where coreboot is looking</span>
+</span></span><span class="line"><span class="cl">  $ cp /boot/efi/EFI/debian/* /boot/efi/EFI/BOOT/ <span class="c1">#copy the EFI bits to the directory</span>
+</span></span><span class="line"><span class="cl">  $ cp /boot/efi/EFI/BOOT/grubx64.efi /boot/efi/EFI/BOOT/bootx64.efi <span class="c1">#copy or rename efi file to bootx64 instead of grubx.</span>
+</span></span></code></pre></div><p>This will allow you device to boot but with every reset you will have to follow this through. I guess the same goes if you upgrade some of the boot related components, like grub as the updates will not end up in the correct directory. So don&rsquo;t see this as a fix, it&rsquo;s a workaround.<br>
+I will continue to look for a more premanent solution for the issue but for now I can boot my X220 and that does lower the urgency of the issue.</p>
+
+      </div>
+    </article>
+
+    <hr />
+
+    <div class="post-info">
+      
+      
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        303 Words
+      </p>
+
+      <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+        
+          2020-12-03 07:09
+        
+
+         
+          
+        
+      </p>
+    </div>
+
+    
+    <div class="pagination">
+        
+
+        <div class="pagination__buttons">
+            
+            <span class="button previous">
+                <a href="http://localhost:1313/posts/time-to-update-the-blog/">
+                    <span class="button__icon">←</span>
+                    <span class="button__text">Time to update the blog</span>
+                </a>
+            </span>
+            
+
+            
+            <span class="button next">
+                <a href="http://localhost:1313/posts/moved-to-github/">
+                    <span class="button__text">Blog moving to GitHub</span>
+                    <span class="button__icon">→</span>
+                </a>
+            </span>
+            
+        </div>
+    </div>
+
+
+    
+
+    
+
+    
+
+  </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2025</span>
+            <span><a href="http://localhost:1313/">Mats Hellman</a></span>
+            <span></span>
+            <span><a href="http://localhost:1313/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+            
+        </div>
+    </div>
+    
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span><span>Theme made with &#10084; by <a href="https://github.com/rhazdon">Djordje Atlialp</a></span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.ad54ad97364f77ede35def9096b162bb1f0b3973aa50b080f5e82fa147f6882e2a7200d7535adbf9b51bebf939f1c1ca9bbe6be87530092aca720eac4a226fda.js" integrity="sha512-rVStlzZPd&#43;3jXe&#43;QlrFiux8LOXOqULCA9egvoUf2iC4qcgDXU1rb&#43;bUb6/k58cHKm75r6HUwCSrKcg6sSiJv2g=="></script>
+
+
+
+
+    </body>
+</html>

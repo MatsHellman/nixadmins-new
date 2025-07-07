@@ -1,0 +1,84 @@
+#baseURL = 'https://nixadmins.net/'
+#languageCode = 'en-us'
+#title = 'Ramblings of an old geek'
+baseurl      = "https://nixadmins.net"
+title        = "Ramblings of an old geek"
+languageCode = "en-us"
+theme        = "hello"
+
+#PygmentsCodeFences = true
+#PygmentsStyle = "monokai"
+
+[markup]
+  [markup.highlight]
+  noClasses = false
+  style = "monokai"
+
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
+
+  [params.author]
+    name              = "Mats Hellman"
+  [params.logo]
+    logoMark          = ""
+    logoText          = "mbh@nixadmins #>"
+    logoHomeLink      = "/"
+    logoCursorColor   = "#4AF626"
+
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+  [params.footer]
+    trademark         = 2025
+    rss               = true
+    copyright         = true
+    author            = true
+
+    topText = []
+    bottomText = [
+      "Powered by <a href=\"http://gohugo.io\">Hugo</a>",
+      "Theme made with &#10084; by <a href=\"https://github.com/rhazdon\">Djordje Atlialp</a>"
+    ]
+
+
+  # Subtitle for home
+  homeSubtitle = "Ramblings of an old geek"
+
+  # Set custom CSS
+  customCSS = ["css/custom.css"]
+
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = true
+
+  # Enable sharing buttons, if you like
+  enableSharingButtons = false
+  
+  # Show a global language switcher in the navigation bar
+  enableGlobalLanguageMenu = false
+
+  # Metadata mostly used in document's head
+  description = "My new homepage or blog"
+  keywords = "homepage, blog"
+  images = [""]
+[pagination]
+  pagerSize = 10
+[taxonomies]
+    category = "blog"
+    tag      = "tags"
+    series   = "series"
+
+# And you can even create generic menu
+[[menu.main]]
+  identifier = "/"
+  name       = "/home"
+  url        = "/"
+[[menu.main]]
+  identifier = "about"
+  name       = "/about"
+  url        = "/about"

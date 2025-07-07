@@ -1,0 +1,12 @@
+{{ define "main" }}
+  {{ $posts := where site.RegularPages "Section" "posts" }}
+  
+  {{ $paginator := .Paginate $posts }}
+
+  {{ range $paginator.Pages }}
+    {{ .Render "summary" }}
+  {{ end }}
+
+  {{ partial "pagination.html" . }}
+{{ end }}
+

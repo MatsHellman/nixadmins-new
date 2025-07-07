@@ -1,0 +1,31 @@
+/* Terminal style for the entire code block */
+.highlight, .chroma {
+    background-color: #1e1e1e !important;  /* Terminal background */
+    color: #00ff00 !important;             /* Terminal green text */
+    font-family: 'Courier New', Courier, monospace !important;
+    border-radius: 8px;
+    padding: 1em;
+    overflow-x: auto;
+    font-size: 14px;
+    position: relative;
+    margin-bottom: 1.5em;
+}
+
+/* Make sure all nested spans also inherit green text */
+.highlight * {
+    color: #00ff00 !important;
+}
+
+/* Optional: Add a fake terminal header */
+.highlight::before, .chroma::before {
+    content: "Terminal";
+    display: block;
+    background-color: #333;
+    color: #00ff00;
+    padding: 5px 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+}
