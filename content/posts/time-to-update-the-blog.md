@@ -12,7 +12,7 @@ in the way, I did not have the time for it anymore. At the time I was traveling
 more than half the days in a year and updating a blog on the side just
 wasn't doable.
 
-# Vacation project
+## Vacation project
 
 In Finland everyone working a steady job has at least 5 weeks of vacation.
 Usually we take 4 weeks in the summer and 1 week in the winter. This year the weather isn't great so I decided one of my summer projects when spending time

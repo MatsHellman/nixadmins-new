@@ -33,4 +33,3 @@ The page is served with [Hugo](https://gohugo.io "Hugo") the static page
 generator and it's hosted on GitHub pages. In 2020 the blog was moved from a
 Wordpress.com instance to here. As the content is quite static, and I don't
 do any advertising on the page the free GitHub service is perfect.
-  

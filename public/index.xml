@@ -6,14 +6,21 @@
     <description>Recent content on Ramblings of an old geek</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 07 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Jul 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stuff</title>
+      <link>http://localhost:1313/stuff/</link>
+      <pubDate>Tue, 08 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/stuff/</guid>
+      <description>&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;&#xA;&lt;p&gt;Just a collection of different links I want to keep here.&lt;/p&gt;&#xA;&lt;h3 id=&#34;configurations&#34;&gt;Configurations&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/MatsHellman/dotfiles&#34;&gt;My dotfiles&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>Time to update the blog</title>
       <link>http://localhost:1313/posts/time-to-update-the-blog/</link>
       <pubDate>Mon, 07 Jul 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/time-to-update-the-blog/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;ve looked at my blog from time to time all these years when it&amp;rsquo;s been&#xA;laying dormant. I used to be a active blogger years ago but then life got&#xA;in the way, I did not have the time for it anymore. At the time I was traveling&#xA;more than half the days in a year and updating a blog on the side just&#xA;wasn&amp;rsquo;t doable.&lt;/p&gt;&#xA;&lt;h1 id=&#34;vacation-project&#34;&gt;Vacation project&lt;/h1&gt;&#xA;&lt;p&gt;In Finland everyone working a steady job has at least 5 weeks of vacation.&#xA;Usually we take 4 weeks in the summer and 1 week in the winter. This year the weather isn&amp;rsquo;t great so I decided one of my summer projects when spending time&#xA;inside the house would be getting my blog up and running again.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve looked at my blog from time to time all these years when it&amp;rsquo;s been&#xA;laying dormant. I used to be a active blogger years ago but then life got&#xA;in the way, I did not have the time for it anymore. At the time I was traveling&#xA;more than half the days in a year and updating a blog on the side just&#xA;wasn&amp;rsquo;t doable.&lt;/p&gt;&#xA;&lt;h2 id=&#34;vacation-project&#34;&gt;Vacation project&lt;/h2&gt;&#xA;&lt;p&gt;In Finland everyone working a steady job has at least 5 weeks of vacation.&#xA;Usually we take 4 weeks in the summer and 1 week in the winter. This year the weather isn&amp;rsquo;t great so I decided one of my summer projects when spending time&#xA;inside the house would be getting my blog up and running again.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Issues with Coreboot and a workaround</title>

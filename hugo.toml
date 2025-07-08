@@ -6,8 +6,11 @@ title        = "Ramblings of an old geek"
 languageCode = "en-us"
 theme        = "hello"
 
-#PygmentsCodeFences = true
-#PygmentsStyle = "monokai"
+PygmentsCodeFences = true
+PygmentsStyle = "monokai"
+
+enableRobotsTXT = true
+
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
@@ -86,3 +89,7 @@ theme        = "hello"
   identifier = "about"
   name       = "/about"
   url        = "/about"
+[[menu.main]]
+  identifier = "stuff"
+  name       = "/stuff"
+  url        = "/stuff"
